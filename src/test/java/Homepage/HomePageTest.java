@@ -31,7 +31,8 @@ public class HomePageTest extends CommonTest{
     public void searchBarTesting() throws IOException {
         HomePage HomePage = new HomePage(driver);
         AppliancesPage appliancesPage = new AppliancesPage(getDriver());
-        WebdriverUtils.getDefaultPathByPage(appliancesPage);
+        String value = WebdriverUtils.getDefaultPathByPage(appliancesPage);
+        getDriver().get(value);
         String searchCondition = "Samsung";
         SearchResutPage SearchResultPage = HomePage.searchByText("samsung");
         List<String> titles = SearchResultPage.getSearchResults();
