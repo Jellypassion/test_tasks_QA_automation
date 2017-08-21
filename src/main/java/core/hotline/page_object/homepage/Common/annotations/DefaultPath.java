@@ -16,7 +16,7 @@ import java.lang.annotation.Target;
 public @interface DefaultPath {
 
     //public String defaultPath = null;
-    String DefaultPath();
+    String defaultPath();
 
 
 }
